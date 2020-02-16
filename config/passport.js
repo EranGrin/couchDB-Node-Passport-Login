@@ -32,13 +32,12 @@ module.exports = function(passport) {
         selector: { email :  email},
         fields: [ "email", 'password', '_id']
         })
-      .then( 
-        //// here should come a check for the user/email
-        
-        user => {
-        console.log('this is the user from pasport',user)
-        console.log(user.docs[0].password)
-        if (!user) {
+         
+
+      .then(user => {
+        // console.log(user)
+        // console.log(user.docs[0].password)
+        if (user.bookmark == 'nil') {
           return done(null, false, { message: 'That email is not registered' });
         }
 
@@ -67,19 +66,11 @@ passport.deserializeUser(function(id, done) {
     fields: [ "email", 'password', '_id', 'name']
     }) 
   .then(user => {
-    console.log(user)
-    console.log(user.docs[0]._id)
+    // console.log(user)
+    // console.log(user.docs[0]._id)
 
     done(null, user); // :-)
 
   });
 })
 }
-
-
-// User.findOne({
-//   email: email
-// }).then(user => {
-//   if (!user) {
-//     return done(null, false, { message: 'That email is not registered' });
-//   }
