@@ -16,26 +16,6 @@ console.log(dbName.dbName)
 
 
 
-// // Load DB (need to find how to declare the db globaly)
-// let db = '';
-// const nano = require('nano')('http://admin:admin@localhost:5984');
-// let datenbank = nano.db;
-// let dbName = 'users';
-
-// datenbank.list().then(
-//   erg => {
-//     if (!erg.includes(dbName)) return datenbank.create(dbName);
-//     else return true;
-//         }
-//       ).then(
-//         () => datenbank.use(dbName)
-//       ).then(
-//         () => {
-//           db = datenbank.use(dbName)
-//           // console.log(db)
-//   });
-
-
 // Load User model
 const {
   forwardAuthenticated

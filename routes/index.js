@@ -2,27 +2,12 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
-// Load DB (need to find how to declare the db globaly)
-let db = '' ;
-const nano = require ( 'nano' )('http://admin:admin@localhost:5984');
-let datenbank = nano.db;
-let dbName = 'users';
+const User = require('../models/User');
+const couchDb = require('../config/keys');
+const dbName = new User
+const db = couchDb.use(dbName.dbName);
 
-datenbank.list().then(
-    erg => {
-        if ( !erg.includes(dbName) ) return datenbank.create(dbName);
-        else return true;
-    }
-).then(
-    () => datenbank.use(dbName)
-).then(
-    () => {
-        
-         db = datenbank.use(dbName)
-        // console.log(db)
-    })
 
-    
 // Welcome Page
 router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
 
