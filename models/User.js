@@ -1,7 +1,7 @@
 'use strict';
 const couchDb = require('../config/keys');
 const cheeckName = require('../config/db');
-let dbName = 'users'
+let dbName = 'users'  // db Name
 
 console.log('name', cheeckName);
 

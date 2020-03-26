@@ -1,3 +1,4 @@
+// this part is still not integrated in the code 
 const dbNameCheck = (dbName) => {
     
     couchDb.list().then(
@@ -14,3 +15,4 @@ const dbNameCheck = (dbName) => {
     
 }
 module.exports = dbNameCheck;
+
