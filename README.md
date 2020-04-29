@@ -6,6 +6,12 @@ This is a user login and registration app using Node.js, Express, Passport, Couc
 ### Version: 0.3.0
 
 ### Usage
+Install:
+
+1. You will have to install couchDB locally (dbPort: 5984)
+1. Credential for CouchDB should be user:admin pass:admin (
+2. Create db name: useres
+(Obviously Credential and dbName dbPort etc.. Can be change in the code) 
 
 ```sh
 $ npm install
