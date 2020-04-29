@@ -5,6 +5,9 @@ This is a user login and registration app using Node.js, Express, Passport, Couc
 
 ### Version: 0.3.1
 
+### npm
+https://www.npmjs.com/package/couchdb-node-passport-login
+
 ### Usage
 DB Install:
 1. You will have to install couchDB locally (dbPort: 5984)
