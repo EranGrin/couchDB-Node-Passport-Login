@@ -1,6 +1,6 @@
 {
   "name": "couchdb-node-passport-login",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -27,7 +27,12 @@
     "type": "git",
     "url": "git+https://github.com/EranGrin/couchDB-Node-Passport-Login.git"
   },
-  "keywords": ["couchDB", "Node", "Passport", "Login"],
+  "keywords": [
+    "couchDB",
+    "Node",
+    "Passport",
+    "Login"
+  ],
   "author": "Eran Grin",
   "license": "ISC",
   "bugs": {
